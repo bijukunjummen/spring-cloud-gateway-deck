@@ -35,6 +35,7 @@
 								<li>@bijukunjummen</li>
 							</ul>
 						</small>
+						<small><a href="http://slides.com/spencer/spring-cloud-gateway"></a>Generously borrowed content from Spencer Gibb, Sree Tummidi's Spring One Presentation</a></small>
 					</p>
 				</section>
 				<section>
@@ -44,7 +45,16 @@
 					</aside>
 				</section>
 				<section>
-					<h2>Responsibilities</h2>
+					<h2>Analogous to Filters</h2>
+					<img src="images/ServletFilters.png" title="servlet filters"/>
+				</section>
+				<section>
+					<h2>Gateway</h2>
+					<img src="images/ApiGateway.png" title="servlet filters"/>
+				</section>
+
+				<section>
+					<h3>Responsibilities</h3>
 					<ul>
 						<li>Routing</li>
 						<li>Resiliency</li>
@@ -62,14 +72,30 @@
 					</aside>
 				</section>				
 				<section>
+					<h3>Zuul</h3>
+					<ul>
+						<li>Servlet Based</li>
+						<li>Blocking API</li>
+						<li>Not Dev friendly</li>
+					</ul>
+				</section>
+				<section>
 					<h2>Foundations</h2>
 					<ul>
 						<li>Spring 5</li>
 						<li>Reactor</li>
+						<li>Netty - Non-Blocking IO</li>
 						<li>Spring Boot 2</li>
 					</ul>
 				</section>
-
+				<section>
+					<h3>Async & Non-Blocking - What does it mean</h3>
+				</section>
+				<section>
+					<h3>Non-Blocking Event Loop</h3>
+					<img src="images/Event_Loop_Diagram.svg"/>
+					<small>More Content</small>
+				</section>
 				<section>
 					<h2>References</h2>
 					<ul>
@@ -78,6 +104,7 @@
 						<li><a href="https://www.youtube.com/watch?v=9wocKqF15B8">Spring One 2017 Presentation by Spencer Gibb, Sree Tummidi Youtube</a></li>
 						<li><a href="http://slides.com/spencer/spring-cloud-gateway">Spring One 2017 Presentation by Spencer Gibb, Sree Tummidi Deck</a></li>
 						<li><a href="http://microservices.io/patterns/apigateway.html">Chris Richardson - API Gatway Pattern</a></li>
+						<li><a href="https://gibb.tech/preso/2017-05-11%20There%20Is%20Only%20Zuul%20-%20OSCON.pdf">Spencer Gibbs Oscon Presentation</a></li>
 					</ul>
 				</section>
 			</div>
