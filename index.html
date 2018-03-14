@@ -40,23 +40,11 @@
 				</section>
 				<section>
 					<h2>What is an API Gateway</h2>
+					<img src="images/Gateway.png"/>
+					<small>Courtesy of http://microservices.io/patterns/apigateway.html</small>
 					<aside class="notes">
-							http://microservices.io/patterns/apigateway.html
 					</aside>
 				</section>
-				<section>
-					<h2>Analogous to Filters</h2>
-					<img src="images/ServletFilters.png" title="servlet filters"/>
-				</section>
-				<section>
-					<h2>Gateway</h2>
-					<img src="images/ApiGateway.png" title="servlet filters"/>
-				</section>
-				<section>
-					<h2>Sample From JHipster Project</h2>
-					<img src="images/JHipsterGateway.png" title="JHipsters Gateway"/>
-				</section>
-
 				<section>
 					<h3>Responsibilities</h3>
 					<ul>
@@ -70,11 +58,24 @@
 						<li>Canarying</li>
 						<li>Flexibility</li>
 					</ul>
-					<small><a href="http://slides.com/spencer/spring-cloud-gateway"></a>Thanks to Spencer Gibb, Sree Tummidi's Spring One Presentation</a></small>
 					<aside class="notes">
 							http://microservices.io/patterns/apigateway.html
 					</aside>
 				</section>
+				
+				<section>
+					<h2>Analogous to Filters</h2>
+					<img src="images/ServletFilters.png" title="servlet filters"/>
+				</section>
+				<section>
+					<h2>Gateway</h2>
+					<img src="images/ApiGateway.png" title="servlet filters"/>
+				</section>
+				<section>
+					<h2>Sample From JHipster Project</h2>
+					<img src="images/JHipsterGateway.png" title="JHipsters Gateway"/>
+				</section>
+
 				<section>
 					<h3>Zuul</h3>
 					<ul>
@@ -93,12 +94,34 @@
 					</ul>
 				</section>
 				<section>
-					<h3>Async & Non-Blocking - What does it mean</h3>
+					<section>
+						<h3>Async & Non-Blocking - What does it mean</h3>
+					</section>
+					<section>
+						<img src="images/BlockingThread.png"/>
+					</section>
+					<section>
+						<img src="images/AsyncIO.png"/>
+					</section>
+					<section>
+						<img src="images/AsyncNonBlockingIO.png"/>
+					</section>
 				</section>
 				<section>
-					<h3>Non-Blocking Event Loop</h3>
-					<img src="images/Event_Loop_Diagram.svg"/>
-					<small>More Content</small>
+					<section>
+						<img src="images/ServletBlocking.png"/>
+						<small>Courtesy of <a href="https://medium.com/netflix-techblog/zuul-2-the-netflix-journey-to-asynchronous-non-blocking-systems-45947377fb5c">Netflix Zuul2 Blog</a></small>
+					</section>
+					<section>
+						<img src="images/AsyncNonBlockingIO.png"/>
+						<small>Courtesy of <a href="https://medium.com/netflix-techblog/zuul-2-the-netflix-journey-to-asynchronous-non-blocking-systems-45947377fb5c">Netflix Zuul2 Blog</a></small>
+					</section>					
+					<section>
+						<h3>Non-Blocking Event Loop</h3>
+						<img src="images/Event_Loop_Diagram.svg"/>
+						<small>More Content</small>
+					</section>	
+
 				</section>
 				<section>
 					<h2>References</h2>
@@ -109,6 +132,8 @@
 						<li><a href="http://slides.com/spencer/spring-cloud-gateway">Spring One 2017 Presentation by Spencer Gibb, Sree Tummidi Deck</a></li>
 						<li><a href="http://microservices.io/patterns/apigateway.html">Chris Richardson - API Gatway Pattern</a></li>
 						<li><a href="https://gibb.tech/preso/2017-05-11%20There%20Is%20Only%20Zuul%20-%20OSCON.pdf">Spencer Gibbs Oscon Presentation</a></li>
+						<li><a href="https://medium.com/netflix-techblog/zuul-2-the-netflix-journey-to-asynchronous-non-blocking-systems-45947377fb5c">Zuul2 Intro</a></li>
+						<li><a href="https://www.youtube.com/watch?v=WJK6chc7w3o">Simon Basle - Reactor 3</a></li>
 					</ul>
 				</section>
 			</div>
