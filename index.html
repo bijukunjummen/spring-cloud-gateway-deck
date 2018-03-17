@@ -35,28 +35,32 @@
 								<li>@bijukunjummen</li>
 							</ul>
 						</small>
-						<small><a href="http://slides.com/spencer/spring-cloud-gateway"></a>Generously borrowed content from Spencer Gibb, Sree Tummidi's Spring One Presentation</a></small>
+						<small><a href="https://www.youtube.com/watch?v=9wocKqF15B8">Heavily borrowed from Spencer Gibb, Sree Tummidi's Spring One Presentation</a></small>
 					</p>
 				</section>
 				<section>
-					<h2>What is an API Gateway</h2>
-					<img src="images/Gateway.png"/>
-					<small>Courtesy of http://microservices.io/patterns/apigateway.html</small>
+					<h4>Gateway Routing</h4>
+					<small>Courtesy of https://docs.microsoft.com/en-us/azure/architecture/patterns/gateway-routing</small>
+					<img src="images/Gateway.png" />
 					<aside class="notes">
+							When a client needs to consume multiple services, setting up a separate endpoint for each service and having the client manage each endpoint can be challenging
+							With this pattern, the client application only needs to know about and communicate with a single endpoint. If a service is consolidated or decomposed, the client does not necessarily require updating. It can continue making requests to the gateway, and only the routing changes.
 					</aside>
 				</section>
 				<section>
-					<h3>Responsibilities</h3>
+					<h1>CONTROL</h1>
+				</section>
+
+				<section>
+					<h3>Functions</h3>
 					<ul>
 						<li>Routing</li>
+						<li>Security</li>
 						<li>Resiliency</li>
 						<li>Monolith Strangling</li>
-						<li>Security</li>
 						<li>Rate Limiting/Throttling</li>
 						<li>Monitoring</li>
-						<li>Surgical Routing</li>
-						<li>Canarying</li>
-						<li>Flexibility</li>
+						<li>Canary</li>
 					</ul>
 					<aside class="notes">
 							http://microservices.io/patterns/apigateway.html
@@ -71,10 +75,6 @@
 					<h2>Gateway</h2>
 					<img src="images/ApiGateway.png" title="servlet filters"/>
 				</section>
-				<section>
-					<h2>Sample From JHipster Project</h2>
-					<img src="images/JHipsterGateway.png" title="JHipsters Gateway"/>
-				</section>
 
 				<section>
 					<h3>Zuul</h3>
@@ -85,11 +85,17 @@
 					</ul>
 				</section>
 				<section>
-					<h2>Foundations</h2>
+						<h3>Blocking API</h3>
+						<img src="images/ServletBlocking.png"/>
+						<br/>
+						<small>Courtesy of <a href="https://medium.com/netflix-techblog/zuul-2-the-netflix-journey-to-asynchronous-non-blocking-systems-45947377fb5c">Netflix Zuul2 Blog</a></small>
+					</section>
+				<section>
+					<h3>Spring Cloud Gateway to the Rescue</h3>
 					<ul>
-						<li>Spring 5</li>
+						<li>Spring 5 based</li>
 						<li>Reactor</li>
-						<li>Netty - Non-Blocking IO</li>
+						<li>Netty Server and Http Client - Non-Blocking IO</li>
 						<li>Spring Boot 2</li>
 					</ul>
 				</section>
@@ -112,11 +118,6 @@
 				</section>
 				<section>
 					<section>
-						<img src="images/ServletBlocking.png"/>
-						<br/>
-						<small>Courtesy of <a href="https://medium.com/netflix-techblog/zuul-2-the-netflix-journey-to-asynchronous-non-blocking-systems-45947377fb5c">Netflix Zuul2 Blog</a></small>
-					</section>
-					<section>
 						<img src="images/AsyncNonBlocking.png"/>
 						<br/>
 						<small>Courtesy of <a href="https://medium.com/netflix-techblog/zuul-2-the-netflix-journey-to-asynchronous-non-blocking-systems-45947377fb5c">Netflix Zuul2 Blog</a></small>
@@ -127,6 +128,9 @@
 						<small>More Content</small>
 					</section>	
 
+				</section>
+				<section>
+					<h2>DEMOS..DEMOS..DEMOS..</h2>
 				</section>
 				<section>
 					<h2>References</h2>
