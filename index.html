@@ -26,29 +26,27 @@
     <div class="slides">
         <section>
             <h2>Spring Cloud Gateway</h2>
-
-            <p>
-                <small>Biju Kunjummen
-                    <ul>
-                        <li><a href="http://java-allandsundry.com">http://java-allandsundry.com</a></li>
-                        <li><a href="https://github.com/bijukunjummen">https://github.com/bijukunjummen</a></li>
-                        <li>@bijukunjummen</li>
-                    </ul>
-                </small>
-                <small><a href="https://www.youtube.com/watch?v=9wocKqF15B8">Heavily borrowed from Spencer Gibb, Sree
-                    Tummidi's Spring One Presentation</a></small>
-            </p>
         </section>
+        <section>    
+                <p>
+                    <small>Biju Kunjummen
+                        <ul>
+                            <li><a href="http://java-allandsundry.com">http://java-allandsundry.com</a></li>
+                            <li><a href="https://github.com/bijukunjummen">https://github.com/bijukunjummen</a></li>
+                            <li>@bijukunjummen</li>
+                        </ul>
+                    </small>
+                    <small><a href="https://www.youtube.com/watch?v=9wocKqF15B8">Heavily borrowed from Spencer Gibb, Sree
+                        Tummidi's Spring One Presentation</a></small>
+                </p>
+            </section>
         <section>
             <h4>Gateway Routing</h4>
             <small>Courtesy of https://docs.microsoft.com/en-us/azure/architecture/patterns/gateway-routing</small>
             <img src="images/Gateway.png"/>
             <aside class="notes">
-                When a client needs to consume multiple services, setting up a separate endpoint for each service and
-                having the client manage each endpoint can be challenging
-                With this pattern, the client application only needs to know about and communicate with a single
-                endpoint. If a service is consolidated or decomposed, the client does not necessarily require updating.
-                It can continue making requests to the gateway, and only the routing changes.
+                One of the common usage of Gateway patterns
+                Customer gets a single endpoint to a set of microservices
             </aside>
         </section>
         <section>
@@ -60,15 +58,16 @@
             <ul>
                 <li>Routing</li>
                 <li>Security</li>
-                <li>Resiliency</li>
-                <li>Monolith Strangling</li>
                 <li>Rate Limiting/Throttling</li>
                 <li>Monitoring</li>
                 <li>Canary</li>
             </ul>
-            <aside class="notes">
-                http://microservices.io/patterns/apigateway.html
-            </aside>
+            <br/>
+            <small>Sourced from http://microservices.io/patterns/apigateway.html</small>
+        </section>
+        <section>
+            <h4>Gateway Sample - Monolith Strangling</h4>
+            <img src="images/Strangler.png"/>
         </section>
         <section>
             <h3>Gateway Types</h3>
@@ -101,6 +100,39 @@
             </small>
         </section>
         <section>
+            <section>
+                <h3>Async & Non-Blocking - What does it mean</h3>
+            </section>
+            <section>
+                <h3>A Blocking IO Call</h3>
+                <img src="images/BlockingThread.png"/>
+            </section>
+            <section>
+                <h3>Async Blocking IO Call</h3>
+                <img src="images/AsyncIO.png"/>
+            </section>
+            <section>
+                    <h3>Non-Blocking Event Loop</h3>
+                    <img src="images/Event_Loop_Diagram.svg"/>
+                    <small>More Content</small>
+                </section>
+            <section>
+                <img src="images/AsyncNonBlocking.png"/>
+                <br/>
+                <small>Courtesy of <a
+                        href="https://medium.com/netflix-techblog/zuul-2-the-netflix-journey-to-asynchronous-non-blocking-systems-45947377fb5c">Netflix
+                    Zuul2 Blog</a></small>
+            </section>
+        </section>
+        <section>
+            <h4>Non-Blocking IO is good but coding is difficult</h4>
+            <ul>
+                <li>Callback hell</li>
+                <li>Difficult to debug</li>
+            </ul>
+        </section>
+
+        <section>
             <h3>Spring Cloud Gateway to the Rescue</h3>
             <ul>
                 <li>Spring 5 based</li>
@@ -110,34 +142,13 @@
             </ul>
         </section>
         <section>
-            <section>
-                <h3>Async & Non-Blocking - What does it mean</h3>
-            </section>
-            <section>
-                <h3>A Blocking IO Call</h3>
-                <img src="images/BlockingThread.png"/>
-            </section>
-            <section>
-                <h3>Blocking IO Call using a Thread Pool</h3>
-                <img src="images/AsyncIO.png"/>
-            </section>
-            <section>
-                <h3>Non-Blocking IO using an Event Loop</h3>
-                <img src="images/AsyncNonBlockingIO.png"/>
-            </section>
-            <section>
-                <img src="images/AsyncNonBlocking.png"/>
-                <br/>
-                <small>Courtesy of <a
-                        href="https://medium.com/netflix-techblog/zuul-2-the-netflix-journey-to-asynchronous-non-blocking-systems-45947377fb5c">Netflix
-                    Zuul2 Blog</a></small>
-            </section>
-            <section>
-                <h3>Non-Blocking Event Loop</h3>
-                <img src="images/Event_Loop_Diagram.svg"/>
-                <small>More Content</small>
-            </section>
-
+            <h3>Java/Kotlin based DSL to configure the following</h3>
+            <img src="images/ApiGateway.png"/>
+            <aside class="notes">
+                WebFilter - manipulate the request/response
+                Predicate - test some aspect of the request to determine whether to route it
+                ServerWebExchange - allows access to all parts of the http request and response
+            </aside>
         </section>
         <section>
             <h2>DEMOS..DEMOS..DEMOS..</h2>
